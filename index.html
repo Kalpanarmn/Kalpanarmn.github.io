@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>ProjectBlueOrange</title>
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="" />
+   <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
+   <script>
+   
+   function onLocationFound(e) {
+    var radius = e.accuracy / 2;
+	
+    L.marker(e.latlng).addTo(my_map)
+        .bindPopup("You are within " + radius + " meters from this point").openPopup();
+
+    L.circle(e.latlng, radius).addTo(my_map);
+}
+
+   function PERFECTHOTCHOC (){
+   	 L.marker([-37.811872, 144.960454], {icon: perfect}).addTo(my_map)
+         .bindPopup("<b>Definitely go to</b><br />Hardware Societe <a href='https://www.zomato.com/melbourne/the-hardware-societe-hardware-street-cbd-melbourne'>link</a>.").openPopup();
+	
+	 L.marker([-37.811841, 144.970880], {icon: perfect}).addTo(my_map)
+         .bindPopup("<b>Definitely go to</b><br />Cellar Bar <a href='http://www.florentino.com.au/cellar-bar/'>link</a>.").openPopup();
+	
+	L.marker([-37.815035, 144.957270], {icon: perfect}).addTo(my_map)
+         .bindPopup("<b>Hot choc and a cupcake @</b><br />Little Cupcakes <a href='https://littlecupcakes.com.au/'>link</a>.").openPopup();
+	}
+	
+	
+	
+   function GOODHOTCHOC (){
+   L.marker([ -37.812887, 144.970177], {icon: good}).addTo(my_map)
+         .bindPopup("<b>Go to</b><br />Axil Coffee <a href='https://axilcoffee.com.au/'>link</a>.").openPopup();
+	L.marker([ -37.816880, 144.957285], {icon: good}).addTo(my_map)
+         .bindPopup("<b>Ask Ali to make the hot choc @</b><br />Sevens Wraps <a href='https://www.zomato.com/melbourne/sevens-wraps-baguettes-little-collins-street-cbd-melbourne'>link</a>.").openPopup();
+  L.marker([ -37.810595, 144.964611], {icon: good}).addTo(my_map)
+         .bindPopup("<b>Good hot choc @ this </b><br />San churro <a href='https://goo.gl/maps/mzuTaKA8xsF2'>link</a>.").openPopup();
+   L.marker([-37.813586, 144.971860], {icon: good}).addTo(my_map)
+         .bindPopup("<b>Go to </b><br />Koko Black <a href='https://goo.gl/maps/i8G4mndmnvz'>link</a>.").openPopup();
+   }
+    function OKHOTCHOC (){
+   	
+   L.marker([ -37.812574, 144.970049], {icon: ok}).addTo(my_map)
+         .bindPopup("<b>Try</b><br />Urban Deli <a href='https://goo.gl/maps/HEFtvRnvkeD2'>link</a>.").openPopup();
+  L.marker([ -37.811667, 144.971063], {icon: ok}).addTo(my_map)
+         .bindPopup("<b>Try</b><br />Self Preservation <a href='https://www.zomato.com/melbourne/self-preservation-bourke-street-cbd-melbourne'>link</a>.").openPopup();
+L.marker([ -37.812264, 144.970833], {icon: ok}).addTo(my_map)
+         .bindPopup("<b>Try</b><br />Pie Face <a href='https://goo.gl/maps/p4y5zp7hbaz'>link</a>.").openPopup();
+L.marker([ -37.813004, 144.969142], {icon: ok}).addTo(my_map)
+         .bindPopup("<b>Try</b><br />Oli & Levi <a href='https://goo.gl/maps/KsaF6qLyouH2'>link</a>.").openPopup();
+
+   }
+      
+   function VOMITHOTCHOC (){
+  		L.marker([ -37.812406, 144.970518], {icon: vomit}).addTo(my_map)
+        .bindPopup("<b>Don't go to</b><br />The Meating House").openPopup();
+		
+		L.marker([ -37.813976, 144.970613], {icon: vomit}).addTo(my_map)
+        .bindPopup("<b>Don't go to</b><br />Collins Quarter ").openPopup();
+		
+		
+		}
+		 
+   
+   </script>
+   <style>
+      body {
+         background-color: black;
+         color: white;
+      
+	  }
+	  
+	  button.hotperfect {
+	  		background: none;
+			width: 100px;
+			height: 40px;
+			color: #ccc;
+			border: 1px solid orange;
+			font-size: 15px;
+			font-family: calibri;
+			border-radius: 4px;
+			transition: .6s;
+			overflow: hidden;
+				
+		
+	  }
+	   button.hotgood{
+	  		background: none;
+			width: 100px;
+			height: 40px;
+			color: #ccc;
+			border: 1px solid purple;
+			font-size: 15px;
+			font-family: calibri;
+			border-radius: 4px;
+			transition: .6s;
+			overflow: hidden;
+				
+		
+	  }
+	  
+	    button.hotok{
+	  		background: none;
+			width: 100px;
+			height: 40px;
+			color: #ccc;
+			border: 1px solid blue;
+			font-size: 15px;
+			font-family: calibri;
+			border-radius: 4px;
+			transition: .6s;
+			overflow: hidden;
+				
+		
+	  }
+	  
+	  	    button.hotvomit{
+	  		background: none;
+			width: 100px;
+			height: 40px;
+			color: #ccc;
+			border: 1px solid green;
+			font-size: 15px;
+			font-family: calibri;
+			border-radius: 4px;
+			transition: .6s;
+			overflow: hidden;
+				
+		
+	  }
+	  
+	  button:hover {
+	  		background: orange;
+			color: black;
+			
+	  }
+	    button.hotgood:hover {
+	  		background: purple;
+			color: white	;
+			
+	  }
+	  
+	  button.hotok:hover {
+	  		background: blue;
+			color: white;
+			
+	  }
+	
+	  button.hotvomit:hover {
+	  		background: green;
+			color: white;
+			
+	  }
+	  
+	  button:focus {
+	  		outline: none;
+					
+	  }
+	  
+	  button:before {
+	  		opacity: .5s;
+			filter: blur(30px);
+			transform: translateX(-130) skewx(-15deg);
+		
+	  }
+	  
+	  button:hover:before {
+	  		transform: translateX(300px) skewX(-15deg);
+			opacity: 0.6;
+			transition: .7s
+		
+		
+	  }
+		
+	  button:hover:after {
+	  		transform: translateX(300px) skewX(-15deg);
+			opacity: 1;
+			transition: .7s
+		
+		
+	  }	
+	  
+	  h1 {
+	  		font-family: calibri;
+	  } 
+	  
+	  h2 {
+	  		font-family: calibri;
+	  }
+	  
+	  p {
+	  		font-family: calibri;
+	  }
+
+      #my_div_map {
+         width: 600px;
+         height: 400px;
+      }
+   </style>
+</head>
+<body>
+   <h2> Helping one chocoholic at a time</h2>
+   <p> Whether you're looking for the <span style="color: orange;">perfect</span> hot chocolate OR need something <span style="color: blue;">half decent</span> nearby OR want to avoid wasting tummy space on sub-standard hot chocs, use the map below :)</p>
+   <button class="hotperfect" type="button" onclick="PERFECTHOTCHOC()">Perfect</button>
+   <button class="hotgood" type="button" onclick="GOODHOTCHOC()">Good</button>
+   <button class="hotok" type="button" onclick="OKHOTCHOC()">Ok</button>
+   <button class="hotvomit" type="button" onclick="VOMITHOTCHOC()">Don't bother</button>
+   <br/><br/>
+   <div id="my_div_map"></div>
+   <script>
+   
+   
+   
+   
+   
+var perfect = L.icon({
+    iconUrl: 'cup.png',
+    shadowUrl: 'cupshadow.png',
+
+    iconSize:     [50, 50], // size of the icon
+    shadowSize:   [1, 1], // size of the shadow
+    iconAnchor:   [1, 1], // point of the icon which will correspond to marker's location
+    shadowAnchor: [1, 1],  // the same for the shadow
+    popupAnchor:  [2, 2] // point from which the popup should open relative to the iconAnchor
+});
+
+var good = L.icon({
+    iconUrl: 'good.png',
+    shadowUrl: 'cupshadow.png',
+
+    iconSize:     [50, 50], // size of the icon
+    shadowSize:   [1, 1], // size of the shadow
+    iconAnchor:   [1, 1], // point of the icon which will correspond to marker's location
+    shadowAnchor: [1, 1],  // the same for the shadow
+    popupAnchor:  [2, 2] // point from which the popup should open relative to the iconAnchor
+});
+
+var vomit = L.icon({
+    iconUrl: 'vomit.png',
+    shadowUrl: 'cupshadow.png',
+
+    iconSize:     [28, 28], // size of the icon
+    shadowSize:   [1, 1], // size of the shadow
+    iconAnchor:   [1, 1], // point of the icon which will correspond to marker's location
+    shadowAnchor: [1, 1],  // the same for the shadow
+    popupAnchor:  [2, 2] // point from which the popup should open relative to the iconAnchor
+});
+
+var robbery  = L.icon({
+    iconUrl: 'bank.png',
+    shadowUrl: 'cupshadow.png',
+
+    iconSize:     [50, 50], // size of the icon
+    shadowSize:   [1, 1], // size of the shadow
+    iconAnchor:   [1, 1], // point of the icon which will correspond to marker's location
+    shadowAnchor: [1, 1],  // the same for the shadow
+    popupAnchor:  [2, 2] // point from which the popup should open relative to the iconAnchor
+});
+
+var ok  = L.icon({
+    iconUrl: 'ok.png',
+    shadowUrl: 'cupshadow.png',
+
+    iconSize:     [50, 50], // size of the icon
+    shadowSize:   [1, 1], // size of the shadow
+    iconAnchor:   [1, 1], // point of the icon which will correspond to marker's location
+    shadowAnchor: [1, 1],  // the same for the shadow
+    popupAnchor:  [2, 2] // point from which the popup should open relative to the iconAnchor
+});
+      var my_map = L.map('my_div_map').setView([-37.814, 144.96332], 14);
+	  
+		my_map.locate({setView: true, maxZoom: 14});
+
+		my_map.on('locationfound', onLocationFound);
+
+      L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+         maxZoom: 18,
+         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+            '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+            'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+         id: 'mapbox.streets'
+		 
+		 
+      }).addTo(my_map);
+	  
+	  
+		 
+		 //HARDWARE SOCIETE
+		 //L.marker([-37.811872, 144.960454], {icon: perfect}).addTo(my_map)
+         //.bindPopup("<b>Definitely go to</b><br />Hardware Societe <a href='https://www.zomato.com/melbourne/the-hardware-societe-hardware-street-cbd-melbourne'>link</a>.").openPopup();
+		 
+		 //MEATING PLACE
+		 //L.marker([ -37.812406, 144.970518], {icon: vomit}).addTo(my_map)
+        // .bindPopup("<b>Don't go to</b><br />The Meating House").openPopup();
+		
+		 
+		 //AXIL COFFEE
+		//  L.marker([ -37.812887, 144.970177], {icon: ok}).addTo(my_map)
+         //.bindPopup("<b>Go to</b><br />Axil Coffee <a href='https://axilcoffee.com.au/'>link</a>.").openPopup();
+		
+		
+   </script>
+</body>
+</html>
