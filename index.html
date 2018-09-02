@@ -15,12 +15,11 @@
 	   
     L.circle(e.latlng, radius).addTo(my_map);
 	
-	   
 }
 
    function PERFECTHOTCHOC (){
    	 L.marker([-37.811872, 144.960454], {icon: perfect}).addTo(my_map)
-         .bindPopup("<span class="tooltip"><b>Definitely go to</b><br />Hardware Societe <a href='https://www.zomato.com/melbourne/the-hardware-societe-hardware-street-cbd-melbourne'>link</a>.</span>").openPopup();
+         .bindPopup("<b>Definitely go to</b><br />Hardware Societe <a href='https://www.zomato.com/melbourne/the-hardware-societe-hardware-street-cbd-melbourne'>link</a>").openPopup();
 	
 	 L.marker([-37.811841, 144.970880], {icon: perfect}).addTo(my_map)
          .bindPopup("<b>Definitely go to</b><br />Cellar Bar <a href='http://www.florentino.com.au/cellar-bar/'>link</a>.").openPopup();
@@ -200,9 +199,6 @@ L.marker([ -37.813004, 144.969142], {icon: ok}).addTo(my_map)
 		  	font-size: 25px;
 	  }
 	   
-	   .tooltip {
-		  font-size: 18px;
-	   }
 
       #my_div_map {
          width: 100%;
